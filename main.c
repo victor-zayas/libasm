@@ -7,17 +7,21 @@
 
 int main(void)
 {
-    const char *s = "Up to you";
-    // char buf[64];
+    const char *s = "Hello";
+    char buf[64];
     // char *dup;
 
-    printf("ft_strlen: %zu (expected %zu)\n", ft_strlen(s), strlen(s));
+    printf("ft_strlen: %zu (expected: %zu)\n", ft_strlen(s), strlen(s));
 
-    // ft_strcpy(buf, s);
-    // printf("ft_strcpy: %s (expected %s)\n", buf, s);
+    ft_strcpy(buf, s);
+    printf("ft_strcpy: %s (expected: %s)\n", buf, s);
 
-    // printf("ft_strcmp equal: %d (expected 0)\n", ft_strcmp("abc", "abc"));
-    // printf("ft_strcmp differ: %d (expected >0 or <0)\n", ft_strcmp("abd", "abc"));
+    printf("ft_strcmp equal: %d (expected: 0)\n", ft_strcmp("abc", "abc"));
+    printf("ft_strcmp empty: %d (expected: 0)\n", ft_strcmp("", ""));
+    printf("ft_strcmp s1 > s2: %d (expected: >0)\n", ft_strcmp("abd", "abc"));
+    printf("ft_strcmp s1 < s2: %d (expected: <0)\n", ft_strcmp("abc", "abd"));
+    printf("ft_strcmp s1 empty: %d (expected: <0)\n", ft_strcmp("", "abc"));
+    printf("ft_strcmp s2 empty: %d (expected: >0)\n", ft_strcmp("abc", ""));
 
     // ssize_t w = ft_write(1, "ft_write test\n", 14);
     // printf("ft_write returned: %zd (errno=%d)\n", w, errno);

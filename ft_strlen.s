@@ -5,16 +5,11 @@ global ft_strlen
 section .text
 
 ft_strlen:
-    ; rdi = s
-    xor     rax, rax
-    ; length = 0
-    mov     rcx, rdi
-.find_nul:
-    mov     dl, byte [rcx]
-    cmp     dl, 0
-    je      .done
-    inc     rax
-    inc     rcx
-    jmp     .find_nul
-.done:
-    ret
+    xor     rax, rax                ; Initialize counter to 0
+.loop:  
+    cmp     byte [rdi + rax], 0     ; Compare current byte with '\0'
+    je      .done                   ; If '\0', finish
+    inc     rax                     ; Increment counter
+    jmp     .loop                   ; Repeat
+.done:  
+    ret                             ; Return length in rax
