@@ -6,8 +6,8 @@ ARFLAGS = rcs
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-ASM_SRCS = ft_strlen.s ft_strcpy.s ft_strcmp.s 
-#ft_write.s ft_read.s ft_strdup.s
+ASM_SRCS = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s 
+#ft_strdup.s
 ASM_OBJS = $(ASM_SRCS:.s=.o)
 
 TEST = test_libasm

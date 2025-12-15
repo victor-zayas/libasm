@@ -23,16 +23,16 @@ int main(void)
     printf("ft_strcmp s1 empty: %d (expected: <0)\n", ft_strcmp("", "abc"));
     printf("ft_strcmp s2 empty: %d (expected: >0)\n", ft_strcmp("abc", ""));
 
-    // ssize_t w = ft_write(1, "ft_write test\n", 14);
-    // printf("ft_write returned: %zd (errno=%d)\n", w, errno);
+    ssize_t w = ft_write(1, "ft_write test\n", 14);
+    printf("ft_write returned: %zd (errno=%d)\n", w, errno);
 
-    // ssize_t r = ft_read(0, buf, 20);
-    // printf("ft_read returned: %zd (errno=%d)\n", r, errno);
-    // if (r > 0)
-    // {
-    //     buf[r] = 0;
-    //     printf("Read: %s\n", buf);
-    // }
+    ssize_t r = ft_read(0, buf, 20);
+    printf("ft_read returned: %zd (errno=%d)\n", r, errno);
+    if (r > 0)
+    {
+        buf[r] = 0;
+        printf("Read: %s\n", buf);
+    }
 
     // dup = ft_strdup(s);
     // if (dup)
