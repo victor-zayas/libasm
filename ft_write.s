@@ -3,6 +3,7 @@
 
 global  ft_write
 section .text
+
 extern  __errno_location
 
 ft_write:

@@ -26,6 +26,7 @@ int main(void)
     ssize_t w = ft_write(1, "ft_write test\n", 14);
     printf("ft_write returned: %zd (errno=%d)\n", w, errno);
 
+    printf("Please enter up to 20 characters for ft_read test:\n");
     ssize_t r = ft_read(0, buf, 20);
     printf("ft_read returned: %zd (errno=%d)\n", r, errno);
     if (r > 0)
