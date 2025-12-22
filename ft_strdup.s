@@ -2,15 +2,8 @@
 ; char *ft_strdup(const char *s)
 
 global ft_strdup
-<<<<<<< HEAD
-section .text
-
 extern malloc
 extern ft_strlen
-
-ft_strdup:
-=======
-extern malloc
 
 section .text
 
@@ -48,4 +41,3 @@ ft_strdup:
     pop     rdi                     ; Clean stack
     xor     rax, rax                ; Return NULL
     ret
->>>>>>> 71a8c8d (ft_strdup done)
