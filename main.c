@@ -9,7 +9,7 @@ int main(void)
 {
     const char *s = "Hello";
     char buf[64];
-    // char *dup;
+    char *dup;
 
     printf("ft_strlen: %zu (expected: %zu)\n", ft_strlen(s), strlen(s));
 
@@ -35,16 +35,16 @@ int main(void)
         printf("Read: %s\n", buf);
     }
 
-    // dup = ft_strdup(s);
-    // if (dup)
-    // {
-    //     printf("ft_strdup: %s (expected %s)\n", dup, s);
-    //     free(dup);
-    // }
-    // else
-    // {
-    //     perror("ft_strdup failed");
-    // }
+    dup = ft_strdup(s);
+    if (dup)
+    {
+        printf("ft_strdup: %s (expected %s)\n", dup, s);
+        free(dup);
+    }
+    else
+    {
+        perror("ft_strdup failed");
+    }
 
     return 0;
 }
