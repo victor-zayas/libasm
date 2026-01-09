@@ -8,6 +8,7 @@
 int main(void)
 {
     const char *s = "HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello";
+    const char *f = "asdasdasdasd";
     char *buf;
     char *dup;
 
