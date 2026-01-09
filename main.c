@@ -7,11 +7,20 @@
 
 int main(void)
 {
-    const char *s = "Hello";
-    char buf[64];
+    const char *s = "HelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHelloHello";
+    char *buf;
     char *dup;
 
     printf("ft_strlen: %zu (expected: %zu)\n", ft_strlen(s), strlen(s));
+
+    // Allocate buffer dynamically based on string length
+    size_t len = ft_strlen(s);
+    buf = malloc(len + 1);
+    if (!buf)
+    {
+        perror("malloc failed");
+        return 1;
+    }
 
     ft_strcpy(buf, s);
     printf("ft_strcpy: %s (expected: %s)\n", buf, s);
@@ -34,6 +43,8 @@ int main(void)
         buf[r] = 0;
         printf("Read: %s\n", buf);
     }
+
+    free(buf);  // Free the dynamically allocated buffer
 
     dup = ft_strdup(s);
     if (dup)
